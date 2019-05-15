@@ -9,8 +9,9 @@
 import os
 
 print('***获取当前目录***')
-print(os.getcwd())
-print(os.path.abspath(os.path.dirname(__file__)))
+# 以下两种，在当前脚本文件是被引用时，有可能会不同
+print(os.getcwd())  # 当前的工作目录（主脚本文件所在的目录）
+print(os.path.abspath(os.path.dirname(__file__)))  # 当前文件的目录
 
 print('***获取上级目录***')
 print(os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
