@@ -22,6 +22,10 @@ class RandomUserAgentMiddleware(object):
 
     def process_request(self, request, spider):  ###系统电泳函数
         def get_ua():
+            # getattr(object, name[, default]) 获取对象属性
+            # object - - 对象。
+            # name - - 字符串，对象属性。
+            # default - - 默认返回值，如果不提供该参数，在没有对应属性时，将触发AttributeError。
             return getattr(self.ua, self.ua_type)
 
         # user_agent_random=get_ua()
