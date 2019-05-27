@@ -20,8 +20,8 @@ def get_html(url):
         # 如果状态码非200时，抛出异常
         r.raise_for_status()
         # 这里我们知道百度贴吧的编码是utf-8，所以手动设置的。
-        # 爬其他的页面时建议使用：apparent_endconding会从内容中分析出的响应内容编码方式
-        # r.endcodding = r.apparent_endconding
+        # 爬其他的页面时建议使用：apparent_encoding会从内容中分析出的响应内容编码方式
+        # r.encoding = r.apparent_encoding
         r.encoding = 'utf-8'
         return r.text
     except:
